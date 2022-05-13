@@ -1,0 +1,27 @@
+quarkus:
+  datasource:
+    db-king: postgresql
+    username: postgres
+    password: postgres
+    jdbc:
+      url: jdbc:postgresql://localhost:5432/test
+  hibernate-orm:
+    database:
+      generation: none
+  smallrye-openapi:
+    info-title: Example Car API
+    info-version: 1.0.0
+    info-description: Example Quarkus Car CRUD API
+    info-contact-email: no@email.com
+    info-contact-name: Anderson Tres
+    info-license-name: Apache 2.0
+    info-license-url: https://www.apache.org/licenses/LICENSE-2.0.html
+
+"%dev":
+  quarkus:
+    smallrye-openapi:
+      info-title: Example Car API (development)
+"%test":
+  quarkus:
+    smallrye-openapi:
+      info-title: Example Car API (testing)
